@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daystar University - Excellence in Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+    <img src="data:image/png;base64,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" 
+         alt="Daystar University Logo"
+         class="logo-img">
+    <span class="logo-text">Daystar University</span>
+</div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announcement-banner">
+        📢 <strong>BREAKING NEWS:</strong> Applications for May 2026 intake are OPEN!
+        <a href="#contact">Apply Now</a>
+    </div>
+
+   <!-- ==================== HERO SLIDESHOW (HIGH QUALITY) ==================== -->
+<section id="home" class="hero-slideshow">
+
+    <div class="slideshow-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="images/campus1.jpg" alt="Campus Aerial View" class="slide-image">
+            <div class="slide-overlay-text">
+                <h1>Welcome to Daystar University</h1>
+                <p>Excellence in Education & Innovation</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn btn-primary">Explore</a>
+                    <a href="#pricing" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="images/campus2.jpg" alt="Modern Library" class="slide-image">
+            <div class="slide-overlay-text">
+                <h1>World-Class Facilities</h1>
+                <p>Modern Libraries & Smart Classrooms</p>
+                <div class="cta-buttons">
+                    <a href="#departments" class="btn btn-primary">Departments</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="images/campus3.jpg" alt="Student Life" class="slide-image">
+            <div class="slide-overlay-text">
+                <h1>Vibrant Student Life</h1>
+                <p>Clubs, Sports & Leadership Programs</p>
+                <div class="cta-buttons">
+                    <a href="#events" class="btn btn-primary">Upcoming Events</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <img src="images/campus4.jpg" alt="Graduation Ceremony" class="slide-image">
+            <div class="slide-overlay-text">
+                <h1>Shape Your Future</h1>
+                <p>Join Thousands of Successful Graduates</p>
+                <div class="cta-buttons">
+                    <a href="#admission" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- FACT TICKER -->
+    <div class="fact-ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">🌟 Top 5% of universities in Africa</span>
+            <span class="ticker-item">📚 Over 15,000 alumni worldwide</span>
+            <span class="ticker-item">💼 95% graduate employment rate</span>
+            <span class="ticker-item">🌍 50+ international partnerships</span>
+            <span class="ticker-item">🏆 Award-winning faculty & research</span>
+        </div>
+    </div>
+
+    <!-- COUNTERS SECTION -->
+    <section class="counters-section">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-card">
+                    <div class="counter-number">95%</div>
+                    <div class="counter-label">Graduate Employment</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-number">30+</div>
+                    <div class="counter-label">Years of Excellence</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-number">10K+</div>
+                    <div class="counter-label">Students Enrolled</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-number">40+</div>
+                    <div class="counter-label">Partner Universities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="about">
+    <!-- Background YouTube Video -->
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/04YSa33-G7Q?autoplay=1&mute=1&loop=1&playlist=04YSa33-G7Q&controls=0&showinfo=0&modestbranding=1"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content Card -->
+    <div class="content-card fade-in">
+        <h2 class="section-title">About Daystar University</h2>
+
+        <p>
+            <strong>Daystar University</strong> is a leading institution of higher 
+            learning committed to developing graduates with knowledge, skills, 
+            and values needed to serve society effectively.
+        </p>
+
+        <blockquote>
+            "Education is the most powerful weapon which you can use to change the world."
+            <cite>- Nelson Mandela</cite>
+        </blockquote>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat fade-in delay-1">
+                <h3 class="number" data-target="15000">0</h3>
+                <p>Students</p>
+            </div>
+            <div class="stat fade-in delay-2">
+                <h3 class="number" data-target="120">0</h3>
+                <p>Programs</p>
+            </div>
+            <div class="stat fade-in delay-3">
+                <h3 class="number" data-target="5">0</h3>
+                <p>Campuses</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Down -->
+    <div class="scroll-down fade-in">
+        <span>⬇ Scroll</span>
+    </div>
+</section>
+
+
+
+    <!-- ==================== FEATURES SECTION (20+ FEATURES) ==================== -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">20+ University Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Internationally Accredited</h3>
+                    <p>Recognized by CUE and international bodies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>55+ Academic Programs</h3>
+                    <p>Diverse disciplines across all fields.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-flask"></i></div>
+                    <h3>State-of-the-Art Labs</h3>
+                    <p>Modern research and innovation facilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>High-Speed Internet</h3>
+                    <p>Campus-wide seamless connectivity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                    <h3>On-Campus Housing</h3>
+                    <p>Safe, comfortable, and affordable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Campus Dining</h3>
+                    <p>Nutritious meals and modern cafeteria.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Health Center</h3>
+                    <p>On-campus medical clinic with doctors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Fitness Centers</h3>
+                    <p>Gym, swimming pool, sports complex.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Student Mentorship</h3>
+                    <p>Dedicated mentoring and guidance programs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Tech-Enabled Classrooms</h3>
+                    <p>Smart boards, projectors, interactive tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bus"></i></div>
+                    <h3>Campus Transport</h3>
+                    <p>Modern shuttle services to key locations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Career Placement</h3>
+                    <p>95% graduate employment rate guaranteed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-futbol"></i></div>
+                    <h3>Sports Excellence</h3>
+                    <p>13+ competitive sports teams.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-music"></i></div>
+                    <h3>Student Clubs (23+)</h3>
+                    <p>Debate, AI, Drama, Photography, more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Scholarship Programs</h3>
+                    <p>Merit-based and need-based scholarships.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global Exchange</h3>
+                    <p>International student exchange programs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Internship Programs</h3>
+                    <p>Real industry experience opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Green Campus</h3>
+                    <p>Sustainable and eco-friendly initiatives.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-download"></i></div>
+                    <h3>Digital Library</h3>
+                    <p>E-books, journals, and research databases.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Tech Hub</h3>
+                    <p>Innovation and startup incubator space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline">
+        <div class="container">
+            <h2 class="section-title">Major Milestones & Achievements</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1985</div>
+                        <div class="timeline-text"><strong>Founded</strong> - Daystar University established as a Christian liberal arts college.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-text"><strong>Expansion</strong> - First <em>science and engineering</em> degrees awarded.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-text"><strong>Digital Innovation</strong> - Launch of <u>university-wide e-learning</u> initiative.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-text"><strong>Recognition</strong> - Named a <mark>top 10 innovation campus</mark> in Africa.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-text"><strong>PhD Milestone</strong> - Record number of PhD graduates.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRESS BARS SECTION -->
+    <section class="progress-section">
+        <div class="container">
+            <h2 class="section-title">University Progress Metrics</h2>
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Scholarship Applications</span>
+                    <span>68%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 68%;">68%</div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Sports Participation</span>
+                    <span>51%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 51%; background: linear-gradient(90deg, #27ae60, #3498db);">51%</div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Hostel Occupancy</span>
+                    <span>82%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 82%; background: linear-gradient(90deg, #f39c12, #e74c3c);">82%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLUBS SECTION -->
+    <section id="clubs">
+        <div class="container">
+            <h2 class="section-title">Student Clubs & Associations</h2>
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-microphone"></i></div>
+                    <h4>Debate Society</h4>
+                    <p>Public speaking & argumentation</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-brain"></i></div>
+                    <h4>AI & Tech Club</h4>
+                    <p>Coding, AI, Machine Learning</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Environment Club</h4>
+                    <p>Green initiatives & sustainability</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h4>Drama Club</h4>
+                    <p>Performing arts & theater</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-camera"></i></div>
+                    <h4>Photography Club</h4>
+                    <p>Visual storytelling & arts</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>Entrepreneurs</h4>
+                    <p>Startup culture & business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="data:image/jpeg;base64,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" class="team-image" alt="VC">
+                    <div class="team-info">
+                        <div class="team-name">Dr. John Omondi</div>
+                        <div class="team-role">Vice Chancellor</div>
+                        <div class="team-bio">Leading vision for global excellence and innovation.</div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="data:image/jpeg;base64,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" class="team-image" alt="Dean">
+                    <div class="team-info">
+                        <div class="team-name">Prof. Mary Otieno</div>
+                        <div class="team-role">Dean, Science & Engineering</div>
+                        <div class="team-bio">30+ years in research and academia.</div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="data:image/jpeg;base64,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" class="team-image" alt="Dean">
+                    <div class="team-info">
+                        <div class="team-name">Dr. Emeka Igwe</div>
+                        <div class="team-role">Dean, Law & Social Sciences</div>
+                        <div class="team-bio">Advocate for social justice and community.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS SECTION -->
+    <section id="awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="award-title">Top Private University 2025</div>
+                    <div class="award-year">National Rankings</div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-award"></i></div>
+                    <div class="award-title">Innovation in Education Award</div>
+                    <div class="award-year">2026</div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-globe"></i></div>
+                    <div class="award-title">Global Outreach Excellence</div>
+                    <div class="award-year">International Recognition</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLIP CARDS - COURSES -->
+    <section id="courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses (Hover to See Details)</h2>
+            <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Computer Science</h3>
+                    </div>
+                    <div class="flip-back">
+                        <div>
+                            <strong>AI, Data Science</strong><br>
+                            Software Engineering<br>
+                            Cybersecurity
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Law</h3>
+                    </div>
+                    <div class="flip-back">
+                        <div>
+                            <strong>LLB, Criminology</strong><br>
+                            Constitutional Law<br>
+                            Corporate Law
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Business Admin</h3>
+                    </div>
+                    <div class="flip-back">
+                        <div>
+                            <strong>Marketing, Finance</strong><br>
+                            HR Management<br>
+                            Entrepreneurship
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Nursing</h3>
+                    </div>
+                    <div class="flip-back">
+                        <div>
+                            <strong>RN, Clinical Rotation</strong><br>
+                            Public Health<br>
+                            Palliative Care
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section id="values">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3><i class="fas fa-heart"></i> Integrity</h3>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-star"></i> Excellence</h3>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-hands-praying"></i> Servanthood</h3>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-lightbulb"></i> Innovation</h3>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-cross"></i> Faith</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALUMNI SECTION -->
+    <section id="alumni">
+        <div class="container">
+            <h2 class="section-title">Distinguished Alumni</h2>
+            <div class="alumni-grid">
+                <div class="alumni-card">
+                    <img src="https://randomuser.me/api/portraits/men/63.jpg?w=100&h=100&fit=crop" class="alumni-photo" alt="Alumni">
+                    <div class="alumni-name">David Kipchoge</div>
+                    <div class="alumni-title">UN Assistant Secretary General</div>
+                </div>
+                <div class="alumni-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7EnoPKiVgqNu0OXzbTgKkxnZpTKWg4Onrbg&s" class="alumni-photo" alt="Alumni">
+                    <div class="alumni-name">Esther Mutua</div>
+                    <div class="alumni-title">CEO & Founder, Tech Startup</div>
+                </div>
+                <div class="alumni-card">
+                    <img src="data:image/jpeg;base64,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" class="alumni-photo" alt="Alumni">
+                    <div class="alumni-name">Anthony Ochieng</div>
+                    <div class="alumni-title">International Researcher, MIT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Student Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "Daystar transformed my academic journey. The <strong>faculty is incredibly supportive</strong>, 
+                        and the <mark>facilities are world-class</mark>."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>James Kipchoge</h4>
+                            <p>Computer Science Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "The <em>practical approach to learning</em> and <strong>industry connections</strong> 
+                        helped me secure my dream job immediately after graduation."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Alice Mwangi</h4>
+                            <p>Business Admin Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "The <u>diverse campus community</u> and <mark>international exposure</mark> 
+                        prepared me for a global career. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EK</div>
+                        <div class="author-info">
+                            <h4>Ephraim Kimani</h4>
+                            <p>Engineering Graduate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD RESOURCES -->
+    <section id="resources">
+        <div class="container">
+            <h2 class="section-title">Downloadable Resources</h2>
+            <div class="downloads-grid">
+                <div class="download-card">
+                    <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Prospectus 2026</h4>
+                    <p>Complete university guide and programs</p>
+                    <a href="#" class="download-link">Download PDF (2.5 MB)</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon"><i class="fas fa-book"></i></div>
+                    <h4>Student Handbook</h4>
+                    <p>Rules, regulations, and guidelines</p>
+                    <a href="#" class="download-link">Download PDF (1.8 MB)</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon"><i class="fas fa-list"></i></div>
+                    <h4>Clubs Directory</h4>
+                    <p>All student clubs and organizations</p>
+                    <a href="#" class="download-link">Download PDF (0.9 MB)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS STEPS -->
+    <section id="process">
+        <div class="container">
+            <h2 class="section-title">Admissions Process</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Apply Online</h3>
+                    <p>Complete the registration form on our portal</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Upload Documents</h3>
+                    <p>KCSE results and certificates</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Payment</h3>
+                    <p>Pay application fee via M-PESA/Bank</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Admission Test</h3>
+                    <p>Online entrance examination</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Get Offer</h3>
+                    <p>Receive acceptance letter via email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Tuition & Fees</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Undergraduate</h3>
+                    <div class="pricing-amount">KES 110K<sup>/year</sup></div>
+                    <div class="pricing-period">4-Year Program</div>
+                    <ul class="pricing-features">
+                        <li>✓ All disciplines</li>
+                        <li>✓ Flexible payment plans</li>
+                        <li>✓ Scholarships available</li>
+                        <li>✓ Library & labs access</li>
+                    </ul>
+                    <button class="pricing-btn">Apply Now</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">Postgraduate</h3>
+                    <div class="pricing-amount">KES 160K<sup>/year</sup></div>
+                    <div class="pricing-period">1-3 Year Program</div>
+                    <ul class="pricing-features">
+                        <li>✓ Specialized labs</li>
+                        <li>✓ Research grants</li>
+                        <li>✓ Faculty mentorship</li>
+                        <li>✓ Global networking</li>
+                    </ul>
+                    <button class="pricing-btn">Apply Now</button>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-title">PhD</h3>
+                    <div class="pricing-amount">KES 210K<sup>/year</sup></div>
+                    <div class="pricing-period">3-5 Year Program</div>
+                    <ul class="pricing-features">
+                        <li>✓ Research fellowships</li>
+                        <li>✓ Thesis support</li>
+                        <li>✓ International conferences</li>
+                        <li>✓ Publications support</li>
+                    </ul>
+                    <button class="pricing-btn">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORS SECTION -->
+    <section class="sponsors-section">
+        <div class="container">
+            <h2 class="section-title">Our Partners & Sponsors</h2>
+            <div class="sponsors-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="sponsor-logo" alt="Microsoft">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="sponsor-logo" alt="IBM">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="sponsor-logo" alt="Apple">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="sponsor-logo" alt="WhatsApp">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Is Daystar accredited by CUE?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        Yes, Daystar University is fully accredited by the Commission for University Education (CUE) and recognized 
+                        internationally. All our programs meet global standards.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Does the university offer scholarships?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        We offer both merit-based and need-based scholarships to eligible students. Application is done through the 
+                        admissions office.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What sports can I join?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        We have 13+ sports teams including Soccer, Basketball, Handball, Athletics, Tennis, Badminton, Chess, 
+                        Swimming, and more!
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Are there international partnerships?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        Yes! We have <strong>50+ international partnerships</strong> with universities worldwide, offering student 
+                        exchange programs and research opportunities.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 10px;">Stay Updated</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 20px;">Subscribe to our newsletter for latest news, events, and opportunities</p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email address..." required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Visit Our Campuses</h2>
+
+        <div class="map-container">
+            <!-- Embedded Google Map -->
+            <iframe 
+                src="https://www.google.com/maps?q=Daystar+University&output=embed"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+
+            <div class="map-overlay">
+                <h3>📍 Our Locations</h3>
+                <p><strong>Nairobi:</strong> Law & Business</p>
+                <p><strong>Athi River:</strong> Main Campus</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location</h3>
+                    <p>Nairobi,Athi River<br>Kenya</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Phone</h3>
+                    <p>+254 20 3606 000<br>+254 722 206 000</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>admissions@daystar.ac.ke<br>info@daystar.ac.ke</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Office Hours</h3>
+                    <p>Mon–Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="margin-bottom: 25px; color: var(--primary-color);">Send us a Message</h3>
+                <form onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+254...">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Daystar University</h3>
+                    <p>Committed to excellence in education and developing leaders who shape society.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Academic</h4>
+                    <ul>
+                        <li><a href="#pricing">Undergraduate</a></li>
+                        <li><a href="#pricing">Postgraduate</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty Portal</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daystar University. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Cookie Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
